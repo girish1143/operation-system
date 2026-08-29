@@ -1,6 +1,6 @@
-# Next.js + Express TypeScript Full-Stack Project
+# operation-system
 
-This project contains a decoupled full-stack architecture with a **Next.js (TypeScript)** frontend and an **Express (TypeScript)** backend organized into distinct folders.
+This project contains a decoupled full-stack architecture with a **Next.js (TypeScript)** frontend and an **Express (TypeScript)** backend organized into distinct folders for multi-agent corporate intelligence, supervision, and governance.
 
 ---
 
@@ -8,9 +8,10 @@ This project contains a decoupled full-stack architecture with a **Next.js (Type
 
 ```
 .
-├── frontend/                 # Next.js 15 (App Router) + TypeScript
+├── frontend/                 # Next.js 15 (App Router) + TypeScript + TailwindCSS
 │   ├── src/
 │   │   ├── app/              # Layouts, pages, styles
+│   │   ├── components/       # Views: Dashboard, Agent Directory, Governance, etc.
 │   │   └── lib/              # API client and TypeScript interfaces
 │   ├── package.json
 │   ├── tsconfig.json
@@ -19,12 +20,14 @@ This project contains a decoupled full-stack architecture with a **Next.js (Type
 ├── backend/                  # Node.js + Express + TypeScript
 │   ├── src/
 │   │   ├── controllers/      # Route handlers
+│   │   ├── core/             # Agents, auth, discussions, governance, pipeline engines
 │   │   ├── routes/           # Express router endpoints
 │   │   └── server.ts         # Express entry point
 │   ├── .env.example
 │   ├── package.json
 │   └── tsconfig.json
 │
+├── skills/                   # Agent Skills definitions (CEO, CFO, HR, etc.)
 ├── package.json              # Root script runner (concurrently)
 └── README.md
 ```
@@ -84,3 +87,4 @@ Or individually:
 
 - **Frontend:** Configured in `frontend/.env.local` (`NEXT_PUBLIC_API_URL=http://localhost:5000/api`)
 - **Backend:** Configured in `backend/.env` (`PORT=5000`, `FRONTEND_URL=http://localhost:3000`)
+
