@@ -1400,6 +1400,7 @@ export const ALL_100_AGENTS: AgentDefinition[] = [
     capabilities: ['kubernetes_manifest_generation', 'canary_deployment_management', 'incident_auto_remediation'],
     tools: ['cloud_provider_api', 'github_actions_client', 'prometheus_grafana_query'],
     permissions: ['trigger_deployments', 'scale_compute_nodes'],
+    memoryScope: ['engineering'],
     riskLevel: 'critical',
     autonomyLevel: 'level_3_approval_required',
     defaultModel: 'code_optimizer',
